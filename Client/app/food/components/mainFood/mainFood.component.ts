@@ -1,4 +1,5 @@
-import { FoodDataService } from './../../../shared/services/food-data.service';
+import { FoodDataService } from './../../../shared/services/food.dataservice';
+
 import { FoodItem } from './../../../shared/models/foodItem';
 import { Component, OnInit } from '@angular/core';
 
@@ -39,7 +40,7 @@ export class MainFoodComponent implements OnInit {
         this._foodDataService
             .UpdateFood(foodItem.id, foodItem)
             .subscribe((response: FoodItem) => {
-                console.log('updated food');
+                this.resetCurrentlySelectedFoodItem();
                 this.getFood();
             },
             error => console.log(error));
@@ -64,7 +65,7 @@ export class MainFoodComponent implements OnInit {
             error => console.log(error));
     }
 
-    public resetCurrentlySelectedFoodItem = (): void => {
+    private resetCurrentlySelectedFoodItem() {
         this.setCurrentlySelectedFood(new FoodItem());
     }
 }

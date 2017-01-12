@@ -1,6 +1,6 @@
 <div class="container">
     <div class="jumbotron">
-        <foodform [foodItem]="foodSelectedFromList" (foodUpdated)="updateFood($event)" (foodAdded)="addFood($event)" (isCancelled)="resetCurrentlySelectedFoodItem($event)"></foodform>
+        <foodform [foodItem]="foodSelectedFromList" (foodUpdated)="updateFood($event)" (foodAdded)="addFood($event)"></foodform>
         <br/>
         <foodlist [foods]="foods" (foodSelected)="setCurrentlySelectedFood($event)" (foodDeleted)="deleteFood($event)"></foodlist>
     </div>

@@ -26,8 +26,5 @@
             Please enter a valid number (Integer-Range)
         </div>
     </div>
-    <button type="submit" class="btn btn-success" (click)="AddOrUpdateFood(); f.reset();" [disabled]="!f?.valid">Submit</button>
-    <span [hidden]="!isInUpdateMode">
-        <button type="button" class="btn btn-warning" (click)="CancelUpdate(f)">Cancel</button>
-    </span>
+    <button type="submit" class="btn btn-default" (click)="AddOrUpdateFood(); f.reset()" [disabled]="!f?.valid">Submit</button>
 </form>

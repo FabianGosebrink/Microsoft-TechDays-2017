@@ -71,4 +71,4 @@ var FoodDataService = (function () {
     return FoodDataService;
 }());
 exports.FoodDataService = FoodDataService;
-//# sourceMappingURL=food-data.service.js.map
+//# sourceMappingURL=food.dataservice.js.map

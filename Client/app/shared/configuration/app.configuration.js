@@ -11,9 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var Configuration = (function () {
     function Configuration() {
-        // baseUrl: string = 'http://foodapi4demo.azurewebsites.net/api/'; 
-        this.baseUrl = 'http://13.74.187.170/api/';
-        // baseUrl: string = 'http://localhost:5000/api/';
+        this.baseUrl = 'http://foodapi4demo.azurewebsites.net/api/';
+        // baseUrl: string = "http://localhost:5000/api/";
         this.title = 'Angular FoodChooser';
     }
     Configuration = __decorate([

@@ -15,27 +15,17 @@ var FoodFormComponent = (function () {
         var _this = this;
         this.foodUpdated = new core_1.EventEmitter();
         this.foodAdded = new core_1.EventEmitter();
-        this.isCancelled = new core_1.EventEmitter();
-        this.isInUpdateMode = false;
         this.AddOrUpdateFood = function () {
-            _this.isInUpdateMode = false;
             if (_this.foodItem.id) {
-                console.log('update');
                 _this.foodUpdated.emit(_this.currentFood);
             }
             else {
-                console.log('add');
                 _this.foodAdded.emit(_this.currentFood);
             }
         };
     }
     FoodFormComponent.prototype.ngOnChanges = function (changes) {
-        console.log('in ngOnChanges');
         this.currentFood = Object.assign(new foodItem_1.FoodItem(), changes['foodItem'].currentValue);
-        this.isInUpdateMode = !!this.currentFood.id;
-    };
-    FoodFormComponent.prototype.CancelUpdate = function (form) {
-        this.isCancelled.emit(new foodItem_1.FoodItem());
     };
     __decorate([
         core_1.Input(), 
@@ -49,10 +39,6 @@ var FoodFormComponent = (function () {
         core_1.Output(), 
         __metadata('design:type', Object)
     ], FoodFormComponent.prototype, "foodAdded", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], FoodFormComponent.prototype, "isCancelled", void 0);
     FoodFormComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

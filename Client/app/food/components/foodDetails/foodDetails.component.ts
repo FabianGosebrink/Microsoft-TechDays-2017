@@ -1,5 +1,5 @@
 import { FoodItem } from './../../../shared/models/foodItem';
-import { FoodDataService } from './../../../shared/services/food-data.service';
+import { FoodDataService } from './../../../shared/services/food.dataservice';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
