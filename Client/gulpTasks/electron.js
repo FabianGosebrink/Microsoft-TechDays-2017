@@ -37,7 +37,6 @@ gulp.task('build:electron', function (done) {
         'electron-inject',
         'electron-build-win',
         'electron-build-linux',
-        'electron-clean-temp-folder',
         'electron-delete-temp-folder',
         done);
 });

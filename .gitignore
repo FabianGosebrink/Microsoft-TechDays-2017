@@ -2,3 +2,4 @@ Client/node_modules/
 Server/AspNetCore/obj
 Server/AspNetCore/bin
 Client/.dist/
+Client/.tmp/

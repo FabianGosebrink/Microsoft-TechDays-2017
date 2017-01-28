@@ -31,8 +31,7 @@ gulp.task('build:web', function (done) {
         'web-copy-fonts',
         'web-vendor',
         'web-inject',
-        // 'web-clean-temp-folder',
-        // 'web-delete-temp-folder',
+        'web-delete-temp-folder',
         done);
 });
 
