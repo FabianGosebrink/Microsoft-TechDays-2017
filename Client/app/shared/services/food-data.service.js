@@ -13,8 +13,6 @@ var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Rx_1 = require('rxjs/Rx');
 var FoodDataService = (function () {
-    // @Output() foodAdded: EventEmitter<any> = new EventEmitter();
-    // @Output() foodDeleted: EventEmitter<any> = new EventEmitter();
     function FoodDataService(_http, _configuration) {
         var _this = this;
         this._http = _http;
@@ -71,4 +69,4 @@ var FoodDataService = (function () {
     return FoodDataService;
 }());
 exports.FoodDataService = FoodDataService;
-//# sourceMappingURL=food.dataservice.js.map
+//# sourceMappingURL=food-data.service.js.map

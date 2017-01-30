@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var food_dataservice_1 = require('./services/food.dataservice');
+var food_data_service_1 = require('./services/food-data.service');
 var router_1 = require('@angular/router');
 var navigation_component_1 = require('./components/navigation/navigation.component');
 var core_1 = require('@angular/core');
@@ -16,12 +16,6 @@ var common_1 = require('@angular/common');
 var SharedModule = (function () {
     function SharedModule() {
     }
-    SharedModule.forRoot = function () {
-        return {
-            ngModule: SharedModule,
-            providers: [food_dataservice_1.FoodDataService]
-        };
-    };
     SharedModule = __decorate([
         core_1.NgModule({
             imports: [
@@ -33,7 +27,10 @@ var SharedModule = (function () {
                 // Components & directives
                 navigation_component_1.NavigationComponent
             ],
-            providers: [],
+            providers: [
+                // Services
+                food_data_service_1.FoodDataService
+            ],
             exports: [
                 navigation_component_1.NavigationComponent
             ]

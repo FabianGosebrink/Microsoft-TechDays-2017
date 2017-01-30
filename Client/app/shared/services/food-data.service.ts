@@ -9,9 +9,6 @@ export class FoodDataService {
 
     public actionUrl: string;
 
-    // @Output() foodAdded: EventEmitter<any> = new EventEmitter();
-    // @Output() foodDeleted: EventEmitter<any> = new EventEmitter();
-
     constructor(private _http: Http, private _configuration: Configuration) {
         this.actionUrl = _configuration.baseUrl + 'food/';
     }

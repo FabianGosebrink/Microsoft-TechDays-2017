@@ -1,7 +1,7 @@
-import { FoodDataService } from './services/food.dataservice';
+import { FoodDataService } from './services/food-data.service';
 import { RouterModule } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 
     providers: [
         // Services
+        FoodDataService
     ],
 
     exports: [
@@ -25,12 +26,5 @@ import { CommonModule } from '@angular/common';
     ]
 })
 
-export class SharedModule {
-    static forRoot(): ModuleWithProviders {
-        return {
-            ngModule: SharedModule,
-            providers: [FoodDataService]
-        };
-    }
-}
+export class SharedModule { }
 
